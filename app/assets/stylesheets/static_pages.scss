@@ -1,18 +1,4 @@
 
-.v5_18 {
-  width: 782px;
-  height: 145px;
-  background: rgba(163,8,8,1);
-  opacity: 1;
-  position: absolute;
-  top: 611px;
-  left: 290px;
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
-  border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 50px;
-  overflow: hidden;
-}
 .v2_13 {
   width: 674px;
   color: rgba(163,8,8,1);
@@ -51,16 +37,30 @@
 }
 .v5_17 {
   width: 577px;
-  color: rgba(255,248,248,1);
+  color: rgb(250, 248, 248);
   position: absolute;
-  top: 623px;
-  left: 446px;
   font-family: Inter;
   font-weight: Bold;
   font-size: 90px;
   opacity: 1;
-  text-align: left;
+  text-align: center;
+  width: 782px;
+  height: 145px;
+  background: rgb(160, 39, 39);
+  opacity: 1;
+  position: absolute;
+  top: 611px;
+  left: 290px;
+  border-radius: 50px;
+  overflow: hidden;
 }
+
+.v5_17:hover {
+  color: white;
+  text-decoration: none;
+  background-color: rgba(163,8,8,1);
+}
+
 .v25_52 {
   width: 149px;
   height: 165px;

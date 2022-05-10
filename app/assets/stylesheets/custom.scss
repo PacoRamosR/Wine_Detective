@@ -4,8 +4,9 @@
 /* universal */
 
 body {
-  padding-top: 890px;
+  padding-top: 90px;
   background: rgba(193,87,87,1);
+  
 }
 
 section {
@@ -72,10 +73,13 @@ h1, h2, h3, h4, h5, h6 {
   /* footer */
 
 footer {
-  margin-top: 45px;
-  padding-top: 5px;
+  background-color: #222;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
   border-top: 1px solid #eaeaea;
-  color: #777;
+  color: black;
 }
 
 footer a {
@@ -83,7 +87,7 @@ footer a {
 }
 
 footer a:hover {
-  color: #222;
+  color: white;
 }
 
 footer small {
