@@ -30,3 +30,7 @@
  メイン機能実装：5/5 - 5/30
  β版をRUNTEQ内リリース（MVP）：5/30〆切
  本番リリース：5月末
+
+ ER図
+ https://tinyurl.com/4a66yefp
+ 
