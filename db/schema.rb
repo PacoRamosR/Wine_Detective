@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_25_181234) do
+ActiveRecord::Schema.define(version: 2022_05_26_100624) do
 
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
@@ -58,6 +58,22 @@ ActiveRecord::Schema.define(version: 2022_05_25_181234) do
     t.string "password_digest"
     t.boolean "admin", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
+  end
+
+  create_table "wines", force: :cascade do |t|
+    t.string "name"
+    t.string "country"
+    t.integer "price"
+    t.string "grape_variety"
+    t.text "explanation"
+    t.text "pairing"
+    t.integer "smooth_tannic"
+    t.integer "dry_sweet"
+    t.integer "soft_acidic"
+    t.integer "rate"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "light_bold"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
