@@ -2,14 +2,50 @@
 <div class="row">
   <aside class="col-md-4">
     <div class="wine">
+        <div class="wine_presentation">
+            <%= image_tag "alpaca-cabernet.png", size:"80x300" %>   
+            <h1>
+                 <%= @wine.name %>
+            </h1>
+            <h2>
+                <%= @wine.rate %>
+            </h2>  
+        </div>
+        <div class="wine_taste">
+            Test
+        </div>
+        <div class="wine_info">
+            <div class="country">
+                <div class "icon">
+                    <%= image_tag "world icon.webp", size:"125x125" %>
+                    :<%= @wine.country %>
+                    <span class="caption">国産</span>
+                </div>     
+            </div>
+            <div class="price">
+                <div class "icon">
+                    <%= image_tag "Yen icon.png", size:"125x125" %>
+                    :<%= @wine.price %>円
+                    <span class="caption">価格</span>
+                </div>
+            </div>    
+            <div class="grape">
+                <div class= "icon">
+                    <%= image_tag "grape icon.jpeg", size:"125x125" %>
+                    :<%= @wine.grape_variety %>
+                    <span class="caption">葡萄品種</span>
+                </div>    
+            </div> 
+            <div class="explanation">
+                        <%= image_tag "explanation icon.png", size:"125x125" %>
+                        <span class="text">:<%= @wine.explanation %></span><br><br><br>
+                        <span class="caption">商品説明</span>
+            </div>
+              
+        </div>
+            
+        </div>
+        
     </div>
-    <section class="wine_info">
-      <h1>
-        <%= @wine.name %>
-      </h1>
-      <h2>
-        <%= @wine.country %>
-      </h2>
-    </section>
   </aside>
 </div>

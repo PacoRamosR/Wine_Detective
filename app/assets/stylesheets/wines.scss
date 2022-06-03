@@ -2,8 +2,123 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-.wine_info{
+.wine{
     background: rgba(255,255,255,1);
-    width: 1400px;
+    width: 1100px;
     height: 2458px;
+border-radius: 10px;
 }
+
+.wine_presentation{
+    background: rgba(193,87,87,1);
+    width: 349px;
+    height: 527px;
+    opacity: 1;
+    position: absolute;
+    top: 50px;
+    left: 80px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.wine_presentation img{
+    margin-top: 30px;
+    margin-left: 135px;
+}
+
+
+.wine_presentation h1 {
+    position: absolute;
+    top:350px;
+    left: 10px;
+}
+
+.wine_presentation h2 {
+    color: rgba(0,0,0,1);
+    font-size: 36px;
+    font-family: Inter;
+    font-weight: Bold;
+    position: absolute;
+    top:430px;
+    left: 30px;
+}
+
+.wine_taste {
+    background: rgba(193,87,87,1);
+    width: 599px;
+    height: 527px;
+    opacity: 1;
+    position: absolute;
+    top: 50px;
+    left: 450px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.wine_info{
+    background: rgba(193,87,87,1);
+    width: 973px;
+    height: 1527px;
+    opacity: 1;
+    position: absolute;
+    top: 600px;
+    left: 80px;
+    border-radius: 10px;
+}
+
+.country{
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    font-size: 60px;
+    margin: 30px;
+}
+
+.price{
+    position: absolute;
+    top: 220px;
+    left: 100px;
+    font-size: 60px;
+    margin: 30px;
+}
+
+.grape{
+    position: absolute;
+    top: 400px;
+    left: 100px;
+    font-size: 60px;
+    margin: 30px;
+}
+
+.explanation{
+    position: absolute;
+    top: 600px;
+    left: 100px;
+    margin: 30px;
+}
+
+
+.item {
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    width: 120px;
+}
+
+img {
+    float:left;
+}
+
+.caption {
+    display: block;
+    font-size: 40px;
+    margin-right: 600px;
+    text-align: justify;
+}
+
+.text{
+    font-size: 30px;
+}
+
+
+
