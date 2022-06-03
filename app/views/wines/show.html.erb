@@ -12,7 +12,15 @@
             </h2>  
         </div>
         <div class="wine_taste">
-            Test
+            <h1>Wine Taste</h1>
+            <% data1 = ["", @wine[:dry_sweet]], ["", @wine[:dry_sweet]] %>
+            <% data2 = ["", @wine[:light_bold]], ["", @wine[:light_bold]] %>
+            <% data3 = ["", @wine[:smooth_tannic]], ["", @wine[:smooth_tannic]] %>
+            <% data4 = ["", @wine[:soft_acidic]], ["", @wine[:soft_acidic]] %>
+            <%= bar_chart data1, min:0, max:100, legend: false, colors: ["black", "black"],height: "110px", xtitle: "dry                                                                                                                   sweet" %>
+            <%= bar_chart data2, min:0, max:100, legend: false, colors: ["black", "black"],height: "110px", xtitle: "light                                                                                                                  bold"  %>
+            <%= bar_chart data3, min:0, max:100, legend: false, colors: ["black", "black"],height: "110px", xtitle: "smooth                                                                                                                   tannic"  %>
+            <%= bar_chart data4, min:0, max:100, legend: false, colors: ["black", "black"],height: "110px", xtitle: "soft                                                                                                                   acidic"  %>
         </div>
         <div class="wine_info">
             <div class="country">
