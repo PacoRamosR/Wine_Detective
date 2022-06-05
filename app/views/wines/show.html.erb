@@ -17,43 +17,25 @@
             <% data2 = ["", @wine[:light_bold]], ["", @wine[:light_bold]] %>
             <% data3 = ["", @wine[:smooth_tannic]], ["", @wine[:smooth_tannic]] %>
             <% data4 = ["", @wine[:soft_acidic]], ["", @wine[:soft_acidic]] %>
-            <%= bar_chart data1, min:0, max:100, legend: false, colors: ["black", "black"],height: "110px", xtitle: "dry                                                                                                                   sweet" %>
-            <%= bar_chart data2, min:0, max:100, legend: false, colors: ["black", "black"],height: "110px", xtitle: "light                                                                                                                  bold"  %>
-            <%= bar_chart data3, min:0, max:100, legend: false, colors: ["black", "black"],height: "110px", xtitle: "smooth                                                                                                                   tannic"  %>
-            <%= bar_chart data4, min:0, max:100, legend: false, colors: ["black", "black"],height: "110px", xtitle: "soft                                                                                                                   acidic"  %>
+            <%= bar_chart data1, min:0, max:100, legend: false, colors: ["#F39C12", "#F39C12"], background: ["white","white"],height: "110px", xtitle: "dry                                                                                                                   sweet" %>
+            <%= bar_chart data2, min:0, max:100, legend: false, colors: ["#F39C12", "#F39C12"],height: "110px", xtitle: "light                                                                                                                  bold"  %>
+            <%= bar_chart data3, min:0, max:100, legend: false, colors: ["#F39C12", "#F39C12"],height: "110px", xtitle: "smooth                                                                                                                   tannic"  %>
+            <%= bar_chart data4, min:0, max:100, legend: false, colors: ["#F39C12", "#F39C12"],height: "110px", xtitle: "soft                                                                                                                   acidic"  %>
         </div>
         <div class="wine_info">
             <div class="country">
-                <div class "icon">
-                    <%= image_tag "world icon.webp", size:"125x125" %>
-                    :<%= @wine.country %>
+                <div class= "icon">
+                    <%= image_tag "world icon.webp", size:"100x100" %>
                     <span class="caption">国産</span>
-                </div>     
+                </div> 
+                <div  class="text">:<%= @wine.country %></div>    
             </div>
             <div class="price">
-                <div class "icon">
-                    <%= image_tag "Yen icon.png", size:"125x125" %>
-                    :<%= @wine.price %>円
-                    <span class="caption">価格</span>
-                </div>
-            </div>    
-            <div class="grape">
-                <div class= "icon">
-                    <%= image_tag "grape icon.jpeg", size:"125x125" %>
-                    :<%= @wine.grape_variety %>
-                    <span class="caption">葡萄品種</span>
-                </div>    
-            </div> 
-            <div class="explanation">
-                        <%= image_tag "explanation icon.png", size:"125x125" %>
-                        <span class="text">:<%= @wine.explanation %></span><br><br><br>
-                        <span class="caption">商品説明</span>
+            <div class= "icon">
+                <%= image_tag "Yen icon.png", size:"100x100" %>
+                <span class="caption">価格</span>
             </div>
-              
+            <div  class="text">:<%= @wine.price %>円</div> 
         </div>
-            
-        </div>
-        
-    </div>
-  </aside>
+     </aside>
 </div>
