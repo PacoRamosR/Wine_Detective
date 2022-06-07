@@ -9,4 +9,5 @@ class Wine < ApplicationRecord
     validates :dry_sweet, presence: true
     validates :soft_acidic, presence: true
     validates :light_bold, presence: true
+    paginates_per 8
 end

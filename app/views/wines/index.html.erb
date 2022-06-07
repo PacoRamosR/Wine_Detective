@@ -1,0 +1,10 @@
+<% provide(:title, 'All wines') %>
+<h1>All wines</h1>
+
+<%= paginate @wines %>
+
+<ul class="wines">
+<%= render @wines %>
+</ul>
+
+<%= paginate @wines %>

@@ -31,11 +31,33 @@
                 <div  class="text">:<%= @wine.country %></div>    
             </div>
             <div class="price">
-            <div class= "icon">
-                <%= image_tag "Yen icon.png", size:"100x100" %>
-                <span class="caption">価格</span>
+                <div class= "icon">
+                    <%= image_tag "Yen icon.png", size:"100x100" %>
+                    <span class="caption">価格</span>
+                 </div>
+                <div  class="text">:<%= @wine.price %>円</div> 
             </div>
-            <div  class="text">:<%= @wine.price %>円</div> 
+            <div class="grape">
+                <div class= "icon">
+                    <%= image_tag "grape icon.jpeg", size:"100x100" %>
+                    <span class="caption">葡萄品種</span>
+                </div> 
+                <div  class="text">:<%= @wine.grape_variety %></div>    
+            </div> 
+            <div class="explanation">
+                <div class= "icon">
+                <%= image_tag "explanation icon.png", size:"100x100" %>
+                <span class="caption">商品説明</span>
+                </div>
+                <div  class="text">:<%= @wine.explanation %></div>
+            </div> 
+            <div class="pairing">
+                <div class= "icon">
+                    <%= image_tag "snack icon.png", size:"100x100" %>
+                    <span class="pearing">ペアリング</span>
+                </div>    
+                <div  class="text">:<%= @wine.pairing %></div>
+        </div>
         </div>
      </aside>
 </div>

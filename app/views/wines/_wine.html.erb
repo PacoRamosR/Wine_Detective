@@ -1,0 +1,14 @@
+<div class= "wrapper">
+    <div class="wine_index">
+        <%= image_tag "alpaca-cabernet.png", size:"60x225" %>  
+        <p><%= link_to wine.name, wine %></p>
+    </div>
+    <div class= "wine_index_info">
+        <h2>Wine Taste</h2>
+    </div>
+</div>
+
+<% if current_user.admin?  %>
+| <%= link_to "delete", wine, method: :delete,
+                              data: { confirm: "You sure?" } %>
+<% end %>

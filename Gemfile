@@ -16,6 +16,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'kaminari', '1.1.1'
 gem 'chartkick', '~> 4.1', '>= 4.1.3'
 
+
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'rails-controller-testing'
 gem 'bcrypt',         '3.1.13'
