@@ -45,5 +45,6 @@ Wine.create!(name: "Example wine",
               dry_sweet: dry_sweet,
               soft_acidic: soft_acidic,
               rate: rate,
-              light_bold: light_bold)          
+              light_bold: light_bold)
+# Generate microposts for a subset of users.
 end

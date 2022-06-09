@@ -1,4 +1,5 @@
 class Wine < ApplicationRecord
+    has_many :microposts, dependent: :destroy
     validates :name, presence: true
     validates :country, presence: true
     validates :price, presence: true

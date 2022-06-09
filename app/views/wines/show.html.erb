@@ -8,7 +8,7 @@
                  <%= @wine.name %>
             </h1>
             <h2>
-                <%= @wine.rate %>
+                Rate:<%= @wine.rate %>
             </h2>  
         </div>
         <div class="wine_taste">
@@ -57,7 +57,21 @@
                     <span class="pearing">ペアリング</span>
                 </div>    
                 <div  class="text">:<%= @wine.pairing %></div>
-        </div>
+            </div>
+            <div class="container">
+                <aside class="col-md-7">
+                    <section class="micropost_form">
+                        <%= render 'shared/micropost_form' , { wine: @wine, micropost: @micropost }%>
+                    </section>
+                </aside>
+            </div>
+            <div class="container-2"
+                <h1>Reviews </h1>
+                <ol class="microposts">
+                    <%= render @microposts %>
+                </ol>
+                <%= paginate @microposts %>
+            </div>
         </div>
      </aside>
 </div>

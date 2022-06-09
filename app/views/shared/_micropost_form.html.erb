@@ -1,0 +1,7 @@
+<%= form_with model: micropost, url: [wine, micropost], id: 'new_comment' do |f| %>
+    <%= render 'shared/error_messages', object: f.object %>
+    <div class="form-group">
+      <%= f.text_area :content,class: "form-control", rows:5, cols:100, placeholder: "Share your review" %>
+    </div>
+    <%= f.submit "Post", class: "btn btn-primary" %>
+  <% end %>
