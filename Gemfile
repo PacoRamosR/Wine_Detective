@@ -15,6 +15,8 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 gem 'kaminari', '1.1.1'
 gem 'chartkick', '~> 4.1', '>= 4.1.3'
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.8'
+gem 'font-awesome-sass'
 
 
 gem 'bootsnap', '>= 1.4.4', require: false

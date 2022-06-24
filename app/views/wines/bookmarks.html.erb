@@ -1,0 +1,16 @@
+<% content_for(:title, t('.title')) %>
+
+  <!-- 掲示板一覧 -->
+  <div class="row">
+  <h1>お気に入りワイン</h1>
+    <div class="col-12">
+      <div class="row">
+        <% if @bookmark_wines.present? %>
+          <%= render @bookmark_wines %>
+        <% else %>
+          <p><%= t('.no_result') %></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

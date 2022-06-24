@@ -1,15 +1,21 @@
+<%= link_to wine, class: "a-primary" do %>
 <div class= "wrapper">
     <div class="wine_index">
-        <%= image_tag "alpaca-cabernet.png", size:"60x225" %>  
-        <p><%= link_to wine.name, wine %></p>
+        <%= image_tag wine.profile_picture, size:"60x225" %>  
+
     </div>
     <div class= "wine_index_info">
-        <h2>Wine Taste</h2>
-        
+        <h1><%= wine.name %></h1>
+        <p><%= wine.country %></p>
+        <p><%= wine.wine_type %></p>
+        <h1><%= wine.price %>円</h1>
     </div>
 </div>
+<% end %>
 
-<% if current_user.admin?  %>
+<% if current_user.admin  %>
 | <%= link_to "delete", wine, method: :delete,
                               data: { confirm: "You sure?" } %>
+|    <%= link_to "edit", edit_wine_path(wine) %>
+|
 <% end %>

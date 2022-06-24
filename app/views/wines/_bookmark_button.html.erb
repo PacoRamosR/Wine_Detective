@@ -1,0 +1,5 @@
+<% if current_user.bookmark?(wine) %>
+  <%= render 'unbookmark', { wine: wine } %>
+<% else %>
+  <%= render 'bookmark', { wine: wine } %>
+<% end %>

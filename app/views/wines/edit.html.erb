@@ -1,0 +1,53 @@
+<% provide(:title, "Edit wine") %>
+<h1>Update your profile</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_with(model: @wine, local: true) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %>
+
+      <%= f.label :country %>
+      <%= f.text_field :country, class: 'form-control' %>
+
+      <%= f.label :price %>
+      <%= f.text_field :price, class: 'form-control' %>
+
+      <%= f.label :grape_variety %>
+      <%= f.text_field :grape_variety, class: 'form-control' %>
+
+      <%= f.label :explanation %>
+      <%= f.text_field :explanation, class: 'form-control' %>
+
+      <%= f.label :pairing %>
+      <%= f.text_field :pairing, class: 'form-control' %>
+
+      <%= f.label :smooth_tannic %>
+      <%= f.text_field :smooth_tannic, class: 'form-control' %>
+
+      <%= f.label :dry_sweet %>
+      <%= f.text_field :dry_sweet, class: 'form-control' %>
+
+      <%= f.label :soft_acidic %>
+      <%= f.text_field :soft_acidic, class: 'form-control' %>
+
+      <%= f.label :rate %>
+      <%= f.text_field :rate, class: 'form-control' %>
+
+      <%= f.label :light_bold %>
+      <%= f.text_field :light_bold, class: 'form-control' %>
+
+      <%= f.label :wine_type %>
+      <%= f.text_field :wine_type, class: 'form-control' %>
+
+      <%= f.label :profile_picture, "Profile picture" %>
+      <%= f.file_field :profile_picture, accept: 'image/jpeg,  image/png, image/jpg'%>
+
+
+      <%= f.submit "Save changes", class: "btn btn-primary" %>
+    <% end %>
+
+  </div>
+</div>

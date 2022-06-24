@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_07_102756) do
+ActiveRecord::Schema.define(version: 2022_06_23_060041) do
 
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
@@ -50,6 +50,16 @@ ActiveRecord::Schema.define(version: 2022_06_07_102756) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+  create_table "bookmarks", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "wine_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id", "wine_id"], name: "index_bookmarks_on_user_id_and_wine_id", unique: true
+    t.index ["user_id"], name: "index_bookmarks_on_user_id"
+    t.index ["wine_id"], name: "index_bookmarks_on_wine_id"
+  end
+
   create_table "microposts", force: :cascade do |t|
     t.text "content"
     t.integer "user_id", null: false
@@ -85,9 +95,13 @@ ActiveRecord::Schema.define(version: 2022_06_07_102756) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "light_bold"
+    t.string "type"
+    t.string "wine_type"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "bookmarks", "users"
+  add_foreign_key "bookmarks", "wines"
   add_foreign_key "microposts", "users"
 end

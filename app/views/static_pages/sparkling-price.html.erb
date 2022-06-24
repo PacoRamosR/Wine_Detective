@@ -1,0 +1,27 @@
+<% provide(:title, "Choice") %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= yield(:title) %> | Wine Detective</title>
+  </head>
+  <body>
+    <h1>お勧め</h1>
+    <div class=container>
+      <div class= choice-box>
+        <br><h1>今日のワインの予算はいくらですか？<h1>
+        <%= link_to "food32" do %>
+          <div class= choice-image-sp>
+            <%=  image_tag("price/medium-price.jpeg") %>
+            <span>1000円以下</span>
+          </div>
+        <% end %>
+        <%= link_to "food33" do %>
+          <div class= choice-image-sp>
+            <%=  image_tag("price/big-price.jpeg") %>
+            <span>1000円以上</span>
+          </div>
+        <% end %>  
+      </div>
+    </<div>
+  </body>
+</html>

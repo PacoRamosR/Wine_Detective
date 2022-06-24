@@ -16,26 +16,41 @@
   <ul class="nav navbar-nav navbar-right collapse navbar-collapse"
       id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "Help", help_path %></li>
-        <li><%= link_to "Wines", wines_path %></li>
-        <% if logged_in? %>
-          <li><%= link_to "Users", users_path %></li>
-          <li class="dropdown">
+        <li><%= link_to "ホーム", root_path %></li>
+
+
+        <% if current_user && current_user.admin? %>
+        <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              Account <b class="caret"></b>
+              Wine admin <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
-              <li><%= link_to "Profile", current_user %></li>
-              <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+              <li><%= link_to "New Wine", new_wine_path %></li>
+            </ul>
+            <li><%= link_to "Users", users_path %></li>
+        </li>
+        <% end %>
+        <% if logged_in? %>
+          <li><%= link_to "おすすめ", choice_path %></li>
+          <li><%= link_to "ワイン一覧", wines_path %></li>
+          <li class="nav-item">
+            <%= link_to t('wines.bookmarks.お気に入り'), bookmarks_wines_path, class: 'nav-link' %>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              管理 <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "プロファイル", current_user %></li>
+              <li><%= link_to "設定", edit_user_path(current_user) %></li>
               <li class="divider"></li>
               <li>
-                <%= link_to "Log out", logout_path, method: :delete %>
+                <%= link_to "ログアウト", logout_path, method: :delete %>
               </li>
             </ul>
           </li>
         <% else %>
-          <li><%= link_to "Log in", login_path %></li>
+          <li><%= link_to "ログイン", login_path %></li>
         <% end %>
       </ul>
     </nav>
