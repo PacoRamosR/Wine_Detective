@@ -1,95 +1,161 @@
 <% provide(:title, @wine.name) %>
-<div class="row">
-  <aside class="col-md-4">
-    <div class="wine">
-        <div class="wine_presentation">
-            <div class= presentation-like>
-                <%= render 'bookmark_button', wine: @wine  %>
-            </div>
-            <div class="presentation-img">
-            
-                <%= image_tag(@wine.profile_picture) if @wine.profile_picture.attached? %> 
-            </div> 
-            <span>
-                 <%= @wine.name %>
-            </span>
-            <h2>
-                <%= @wine.wine_type %>
-            </h2>  
-        </div>
-        <div class="wine_taste">
-            <h1>Wine Taste</h1>
-            <% data1 = ["", @wine[:dry_sweet]], ["", @wine[:dry_sweet]] %>
-            <% data2 = ["", @wine[:light_bold]], ["", @wine[:light_bold]] %>
-            <% data3 = ["", @wine[:smooth_tannic]], ["", @wine[:smooth_tannic]] %>
-            <% data4 = ["", @wine[:soft_acidic]], ["", @wine[:soft_acidic]] %>
-            <%= bar_chart data1, min:0, max:100, legend: false, colors: ["#6A291E", "#6A291E"],height: "110px", xtitle: "辛口                                                                                                                   甘口" %>
-            <%= bar_chart data2, min:0, max:100, legend: false, colors: ["#53120a", "#53120a"],height: "110px", xtitle: "軽い                                                                                                                  重い"  %>
-            <% if @wine.smooth_tannic > 0 %>
-            <%= bar_chart data3, min:0, max:100, legend: false, colors: ["#53120a", "#53120a"],height: "110px", xtitle: "タンニン控えめ                                                                                                                  タンニン強い "  %>
-            <% end %>
-            <%= bar_chart data4, min:0, max:100, legend: false, colors: ["#53120a", "#53120a"],height: "110px", xtitle: "まろやか                                                                                                                   シャープ"  %>
-        </div>
-        <div class="wine_info">
-            <h1>ワイン情報</h1>
-            <div class="info">
-                <div class= "icon">
-                    <%= image_tag "world icon.webp", size:"100x100" %>
-                    <span class="caption">産地</span>
-                </div> 
-                <div  class="text">:<%= @wine.country %></div>    
-            </div>
-            <span class="divider"></span>
-            <div class="info">
-                <div class= "icon">
-                    <%= image_tag "Yen icon.png", size:"100x100" %>
-                    <span class="caption">価格</span>
-                 </div>
-                <div  class="text">:<%= @wine.price %>円（税込）</div> 
-            </div>
-            <span class="divider"></span>
-            <div class="info">
-                <div class= "icon">
-                    <%= image_tag "grape icon.png", size:"100x100" %>
-                    <span class="caption">葡萄品種</span>
-                </div> 
-                <div  class="text">:<%= @wine.grape_variety %></div>    
-            </div> 
-            <span class="divider"></span>
-            <div class="info">
-                <div class= "icon">
-                <%= image_tag "explanation icon.png", size:"100x100" %>
-                <span class="caption">商品説明</span>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Shop Homepage - Start Bootstrap Template</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+
+
+<section id="showcase" class="">
+    <div class="primary-overlay text-white">
+        <div class="container mt-5">
+            <div class="row mt-5" >
+                <div class="col-lg-6 text-center pt-5">
+                    <h1 class="display-2  mt-5 pt-5">
+                    <% if I18n.locale == :ja %>
+                        <%= @wine.name %>
+                    <% else %>
+                        <%= @wine.name_en %>
+                    <% end %>        
+                    </h1>
+                    <p class="lead">
+                    <% if I18n.locale == :ja %>
+                        <%= @wine.explanation %>
+                    <% else %>
+                        <%= @wine.explanation_en %>
+                    <% end %> 
+                    </p>
                 </div>
-                <div  class="text">:<%= @wine.explanation %></div>
-            </div> 
-            <span class="divider"></span>
-            <div class="info">
-                <div class= "icon">
-                    <%= image_tag "snack icon.png", size:"100x100" %>
-                    <span class="pearing">ペアリング</span>
-                </div>    
-                <div  class="text">:<%= @wine.pairing %></div>
+                <div class="col-lg-6">
+                    <div class= presentation-like>
+                        <%= render 'bookmark_button', wine: @wine  %>
+                    </div>
+                    <img class="img-fluid d-none d-lg-block"><%= image_tag(@wine.profile_picture) %>
+                </div>
             </div>
-            <span class="divider"></span>
-            <div class="container">
-                <aside class="col-md-7">
-                    <section class="micropost_form">
-                        <%= render 'shared/micropost_form' , { wine: @wine, micropost: @micropost }%>
-                    </section>
-                </aside>
+        </div>
+    </div>
+</section>
+
+<section id="bars" class="bg-dark text-white ">
+    <div class="container pt-5">
+        <div class="row">
+            <div class=" col-lg-2">
+                <h1 class="display-1 align-middle m-5">Wine Taste</h1>
             </div>
-            <div class="container-2"
-                <h1>レビュー </h1>
-                <ol class="microposts">
+                <%= render 'progress_bars' %>
+        </div>
+    </div>
+</section>
+<section id="info" class="my-5 bg-light text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="info-header mb-5">
+                    <h1 class="text pb-3">
+                        <%= t 'wines.show.ワイン情報'%>
+                    </h1>
+                </div>
+            </div>
+        </div>
+    <div class="row mt-5">
+        <div class="col-lg-3 col-md-6">
+            <div class="card mb-5">
+                <div class="card-body">
+                    <img class="img-fluid rounded-circle  mb-3"><%= image_tag "world icon.webp", size:"70x70" %>
+                    <h1><%= t 'wines.show.産地' %></h1>
+                    <h4 class="">
+                    <% if I18n.locale == :ja %>
+                        <%= @wine.country %>
+                    <% else %>
+                        <%= @wine.country_en %>
+                    <% end %>
+                    </h4>
+                </div>
+            </div>
+        </div>
+                <div class="col-lg-3 col-md-6">
+            <div class="card mb-5">
+                <div class="card-body">
+                    <img class="img-fluid rounded-circle  mb-3"><%= image_tag "Yen icon.png", size:"70x70" %>
+                    <h1><%= t 'wines.show.価格' %></h1>
+                    <h4 class="">
+                    <% if I18n.locale == :ja %>
+                        <%= @wine.price %>円(税込) 
+                    <% else %>
+                         ¥<%= @wine.price %>
+                    <% end %>
+                    </h4>
+                </div>
+            </div>
+        </div>        <div class="col-lg-3 col-md-6">
+            <div class="card mb-5">
+                <div class="card-body">
+                    <img class="img-fluid rounded-circle  mb-3"><%= image_tag "grape icon.png", size:"70x70" %>
+                    <h1><%= t 'wines.show.葡萄品種' %></h1>
+                    <h4 class="">
+                    <% if I18n.locale == :ja %>
+                        <%= @wine.grape_variety %>
+                    <% else %>
+                        <%= @wine.grape_variety_en %>
+                    <% end %>
+                    </h4>
+                </div>
+            </div>
+        </div>        <div class="col-lg-3 col-md-6">
+            <div class="card mb-5">
+                <div class="card-body">
+                    <img class="img-fluid rounded-circle  mb-3"><%= image_tag "snack icon.png", size:"70x70" %>
+                    <h1><%= t 'wines.show.ペアリング' %></h1>
+                    <h4 class="">
+                    <% if I18n.locale == :ja %>
+                        <%= @wine.pairing %>
+                    <% else %>
+                        <%= @wine.pairing_en %>
+                    <% end %>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class=" py-5 mb-5">
+    <div class="container">
+      <div class="row">
+        <h1><%= t 'wines.show.レビュー' %> (<%= @microposts.count %>)</h1>
+
+        <div class="col-8 offset-md-2">
+            <div>
                     <% if @microposts.any? %>
                     <%= render @microposts %>
                     <% else %>
                     <h2>今のところレビューありません</h2>
                     <% end %>
-                </ol>
                 <%= paginate @microposts %>
             </div>
-        </div>
-     </aside>
-</div>
+                  </div>
+                      </div>
+                          </div>
+
+	
+	
+    </div>
+            <div class="col-8 offset-md-2 my-5">
+            <%= render 'shared/micropost_form' , { wine: @wine, micropost: @micropost }%>
+            </div>
+
+
+
+  </section>
+

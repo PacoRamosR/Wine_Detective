@@ -1,10 +1,32 @@
 <% provide(:title, 'All wines') %>
-<h1>ワイン一覧</h1>
 
-<%= paginate @wines %>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Shop Homepage - Start Bootstrap Template</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
 
-<ul class="wines">
-<%= render @wines %>
-</ul>
-
-<%= paginate @wines %>
+<div class="index-dark-overlay">
+  <div class="home-inner container pb-5 mb-5">
+    <h1 class="display-2"><%= t 'wines.index.ワイン一覧' %></h1>
+    <%= paginate @wines %>
+        <section class="py-5">
+            <div class="container px-4 px-lg-5 mt-5">
+                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                    <%= render @wines %>
+                </div>
+            </div>
+            <%= paginate @wines %>
+        </div>
+    </div>
+</div>

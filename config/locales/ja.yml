@@ -1,0 +1,56 @@
+en:
+  layouts:
+    header:
+      ホーム: "Home"
+      ワイン管理: "Wine Admin"
+      ワイン登録: "New Wine"
+      ユーザー管理: "Users"
+      おすすめ: "Recommendation"
+      ワイン一覧: "Wine List"
+      お気に入り: "Wish List"
+      管理: "Acount"
+      プロファイル: "Profile"
+      設定: "Settings"
+      ログアウト: "Log out"
+      ログイン: "Log in"
+  users:
+    new:
+      もっとカジュアルにワインを楽しもう！: "Discover and enjoy casual wines!"
+  wines:
+    show:
+      ワイン情報: Wine Info 
+      甘味: Sweetness
+      辛口: Dry
+      甘口: Sweet
+      酸味: Acidity
+      まろやか: Soft
+      シャープ: Sharp
+      ボリューム: Body
+      軽い: Light
+      重い: Full
+      タンニン: Tannin
+      控えめ: Low
+      強い: High
+      産地: Country
+      価格: Price
+      葡萄品種: Grape Variety
+      ペアリング: Pairing
+      お気に入り: Add to Wishlist
+      レビュー: Reviews
+    choice:
+      ワインのお勧め: Wine Recommendation
+      今日は何のワインが飲みたいですか？: What type of wine do you want to drink today?
+      下記の種類の中に一つを選択してクリックしてください。: Select one of the options in below.
+      今日のワインの予算はいくらですか？: What is your budget for today's wine?
+      800円以下: Under ¥800
+      800円以上、1000円以下: Between ¥800 and ¥1000
+      1000円以下: Under ¥1000
+      1000円以上: Over ¥1000
+      今日は何のコンビニ食品を食べますか？: What kind of food are you eating today?
+    index:
+      ワイン一覧: Wine List
+      お気に入りワイン: Wish List
+
+      
+
+

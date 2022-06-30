@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
+  scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
   get 'sessions/new'
   get 'users/new'
   get 'wines/new'
-  root 'static_pages#home'
+  root 'users#new'
   get  '/choice',  to: 'static_pages#choice'
   get  '/price1',  to: 'static_pages#white-price'
   get  '/price2',  to: 'static_pages#red-price'
@@ -19,10 +20,11 @@ Rails.application.routes.draw do
   get  '/about',   to: 'static_pages#about'
   get  '/contact', to: 'static_pages#contact'
 
+
   get  '/signup',  to: 'users#new'
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
-  delete '/logout',  to: 'sessions#destroy'
+  get '/logout',  to: 'sessions#destroy'
   resources :users
   resources :wines do
     resources :microposts, only: %i[create destroy show], shallow: true
@@ -31,4 +33,7 @@ Rails.application.routes.draw do
     end
   end
   resources :bookmarks, only: %i[create destroy]
+  resources :contacts, only: [:new, :create]
+
+end
 end

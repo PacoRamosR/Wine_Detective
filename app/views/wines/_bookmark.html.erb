@@ -1,4 +1,4 @@
-<%= link_to bookmarks_path(wine_id: wine.id), id: "js-bookmark-button-for-wine-#{wine.id}", class:"float-right", method: :post do %>
+<%= button_to bookmarks_path(wine_id: wine.id), id: "js-bookmark-button-for-wine-#{wine.id}", class:"float-right bg-transparent border", method: :post do %>
 <%=  image_tag("star-off.png") %>
-<br>お気に入り
+<h5 class="justify-self-center"><%= t 'wines.show.お気に入り' %></h5>
 <% end %>

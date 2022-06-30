@@ -1,7 +1,11 @@
+<div class="col mb-5" style="width:25%">
 <li>
   <%= link_to user.name, user %>
-  <% if current_user.admin?  %>
-    | <%= link_to "delete", user, method: :delete,
+   | <%= user.email %>
+  <% if current_user.admin? && !current_user?(user) %>
+    | <%= button_to "delete", user, method: :delete, class: "btn btn-primary btn-small",
                                   data: { confirm: "You sure?" } %>
+    | <%= button_to "edit", edit_user_path(user), method: :get, class: "btn btn-primary btn-small"%>
   <% end %>
 </li>
+</div>

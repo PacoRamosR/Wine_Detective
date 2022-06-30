@@ -2,15 +2,22 @@
 <h1>Update your profile</h1>
 
 <div class="row">
-  <div class="col-md-6 col-md-offset-3">
+  <div class="col-md-6 col-md-offset-3 pt-5 pb-5">
     <%= form_with(model: @wine, local: true) do |f| %>
       <%= render 'shared/error_messages', object: f.object %>
 
       <%= f.label :name %>
       <%= f.text_field :name, class: 'form-control' %>
 
+
+      <%= f.label :name_english %>
+      <%= f.text_field :name_en, class: 'form-control' %>
+
       <%= f.label :country %>
       <%= f.text_field :country, class: 'form-control' %>
+
+      <%= f.label :country_english %>
+      <%= f.text_field :country_en, class: 'form-control' %>
 
       <%= f.label :price %>
       <%= f.text_field :price, class: 'form-control' %>
@@ -18,11 +25,20 @@
       <%= f.label :grape_variety %>
       <%= f.text_field :grape_variety, class: 'form-control' %>
 
+      <%= f.label :grape_variety_english %>
+      <%= f.text_field :grape_variety_en, class: 'form-control' %>
+
       <%= f.label :explanation %>
       <%= f.text_field :explanation, class: 'form-control' %>
 
+      <%= f.label :explanation_en %>
+      <%= f.text_field :explanation_en, class: 'form-control' %>
+
       <%= f.label :pairing %>
       <%= f.text_field :pairing, class: 'form-control' %>
+
+      <%= f.label :pairing_en %>
+      <%= f.text_field :pairing_en, class: 'form-control' %>
 
       <%= f.label :smooth_tannic %>
       <%= f.text_field :smooth_tannic, class: 'form-control' %>

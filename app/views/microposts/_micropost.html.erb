@@ -1,13 +1,25 @@
-<li id="micropost-<%= micropost.id %>">
-  <span class="user"><%= micropost.user.name%></span>
-  <span class="user"><%= link_to micropost.wine.name, micropost.wine %></span>
-  <span class="content"><%= micropost.content %></span>
-  <span class="timestamp">
-    Posted <%= time_ago_in_words(micropost.created_at) %> ago.
-  </span>
+
+
+<div class="be-comment">
+		<div class="be-comment-content">
+			
+				<span class="be-comment-name">
+					<a href="blog-detail-2.html"><%= micropost.user.name%></a>
+					</span>
+				<span class="be-comment-time">
+					<i class="fa fa-clock-o"></i>
+					<%= micropost.created_at %>
+				</span>
+
+			<p class="be-comment-text">
+				<%= micropost.content %>
+			</p>
+		</div>
+
 
   <% if current_user?(micropost.user) %>
-      <%= link_to "削除", micropost, method: :delete,
-                                       data: { confirm: "You sure?" } %>
+      <%= button_to "削除", micropost, method: :delete, class: "btn btn-danger btn-small border-rounded btn-lg", style:"width:10%",
+                                       data: { confirm: "You sure?" }%>
+
     <% end %>
-</li>
+	</div>

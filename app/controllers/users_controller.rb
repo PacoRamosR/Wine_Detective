@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
+  before_action :logged_in_user, only: [:index, :edit, :update]
   before_action :correct_user,   only: [:edit, :update]
   before_action :admin_user,     only: :destroy
 
@@ -22,7 +22,7 @@ class UsersController < ApplicationController
       reset_session
       log_in @user
       flash[:success] = "登録できました！"
-      redirect_to @user
+      redirect_to choice_path
     else
       render 'new'
     end

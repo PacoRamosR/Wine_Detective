@@ -6,6 +6,9 @@ ruby '2.6.6'
 
 gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
 gem 'bootstrap-sass', '3.4.1'
+gem 'bootstrap',  '~>4.3.1'
+gem 'jquery-rails'
+gem 'rails-i18n'
 gem 'faker',          '2.11.0'
 gem 'sqlite3', '~> 1.4'
 gem 'puma', '~> 5.0'
@@ -17,6 +20,8 @@ gem 'kaminari', '1.1.1'
 gem 'chartkick', '~> 4.1', '>= 4.1.3'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.8'
 gem 'font-awesome-sass'
+gem 'mail_form'
+gem 'mailcatcher'
 
 
 gem 'bootsnap', '>= 1.4.4', require: false

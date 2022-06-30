@@ -1,0 +1,28 @@
+<%= form_for @contact do |f| %>
+  <div class="input-group input-group-lg mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text">
+        <i class="fas fa-user"></i>
+      </span>
+    </div>
+      <%= f.text_field  :name, required: true, class: "form-control", placeholder: "Name" %></br>
+  </div>
+  <div class="input-group input-group-lg mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text">
+        <i class="fas fa-envelope"></i>
+      </span>
+    </div>
+      <%= f.text_field :email, required: true, class: "form-control", placeholder: "Email" %></br>
+  </div>
+  <div class="input-group input-group-lg mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text">
+        <i class="fas fa-pencil-alt"></i>
+      </span>
+    </div>
+      <%= f.text_area :message, rows: 8, cols: 40, required: true, class: "form-control", 
+            placeholder: "Send me a message"%></br>
+  </div>
+  <%= f.submit 'Send Message', class: 'btn btn-primary' %>
+<% end %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_23_060041) do
+ActiveRecord::Schema.define(version: 2022_06_29_082747) do
 
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
@@ -97,6 +97,12 @@ ActiveRecord::Schema.define(version: 2022_06_23_060041) do
     t.integer "light_bold"
     t.string "type"
     t.string "wine_type"
+    t.string "name_en", default: "uncheck"
+    t.string "country_en", default: "uncheck"
+    t.string "grape_variety_en", default: "uncheck"
+    t.text "explanation_en", default: "uncheck"
+    t.text "pairing_en", default: "uncheck"
+    t.string "wine_type_en", default: "uncheck"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
