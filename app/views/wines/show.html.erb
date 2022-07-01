@@ -140,7 +140,7 @@
                     <% if @microposts.any? %>
                     <%= render @microposts %>
                     <% else %>
-                    <h2>今のところレビューありません</h2>
+                    <h2><%= t 'wines.show.今のところレビューありません' %></h2>
                     <% end %>
                 <%= paginate @microposts %>
             </div>
