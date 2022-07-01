@@ -269,7 +269,7 @@ DEPENDENCIES
   kaminari (= 1.1.1)
   listen (~> 3.3)
   mail_form
-  pg (= 0.20.0)
+  pg
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.4, >= 6.1.4.1)
