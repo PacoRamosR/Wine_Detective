@@ -20,7 +20,7 @@ gem 'chartkick', '~> 4.1', '>= 4.1.3'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.8'
 gem 'font-awesome-sass'
 gem 'mail_form'
-gem 'mailcatcher'
+
 
 
 gem 'bootsnap', '>= 1.4.4', require: false
@@ -29,7 +29,6 @@ gem 'bcrypt',         '3.1.13'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'sqlite3', '~> 1.4'
 end
 
 group :development do
@@ -40,7 +39,7 @@ group :development do
   gem 'rack-mini-profiler', '~> 2.0'
   gem 'listen', '~> 3.3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
+  
 end
 
 group :production do
