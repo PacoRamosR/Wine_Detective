@@ -5,7 +5,6 @@ ruby '2.6.6'
 
 
 gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
-gem 'bootstrap-sass', '3.4.1'
 gem 'bootstrap',  '~>4.3.1'
 gem 'jquery-rails'
 gem 'rails-i18n'
