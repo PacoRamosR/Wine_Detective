@@ -40,7 +40,9 @@
                     <div class= presentation-like>
                         <%= render 'bookmark_button', wine: @wine  %>
                     </div>
+                    <% if @wine.profile_picture.attached? %>
                     <img class="img-fluid d-none d-lg-block"><%= image_tag(@wine.profile_picture) %>
+                    <% end %>
                 </div>
             </div>
         </div>
