@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_29_082747) do
+ActiveRecord::Schema.define(version: 2022_07_01_190621) do
 
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
@@ -60,6 +60,16 @@ ActiveRecord::Schema.define(version: 2022_06_29_082747) do
     t.index ["wine_id"], name: "index_bookmarks_on_wine_id"
   end
 
+  create_table "contacts", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "email", null: false
+    t.string "phone_number", null: false
+    t.integer "subject", default: 0, null: false
+    t.text "message", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "microposts", force: :cascade do |t|
     t.text "content"
     t.integer "user_id", null: false
@@ -95,7 +105,6 @@ ActiveRecord::Schema.define(version: 2022_06_29_082747) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "light_bold"
-    t.string "type"
     t.string "wine_type"
     t.string "name_en", default: "uncheck"
     t.string "country_en", default: "uncheck"
@@ -103,6 +112,7 @@ ActiveRecord::Schema.define(version: 2022_06_29_082747) do
     t.text "explanation_en", default: "uncheck"
     t.text "pairing_en", default: "uncheck"
     t.string "wine_type_en", default: "uncheck"
+    t.text "type"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
