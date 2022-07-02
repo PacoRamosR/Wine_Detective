@@ -4,20 +4,25 @@
       <%= render "shared/error_messages", object: f.object %>
 
       <div class="form-group">
-      <%= f.text_field :name, class: 'form-control form-control-lg', placeholder: t('users.edit.名前') %>
+      <%= t 'users.edit.名前' %> 
+      <%= f.text_field :name, class: 'form-control form-control-lg' %>
       </div>
 
       <div class="form-group">
-      <%= f.email_field :email, class: 'form-control form-control-lg', placeholder: t('users.edit.メールアドレス') %>
+      <%= t 'users.new.メールアドレス' %> 
+      <%= f.email_field :email, class: 'form-control form-control-lg' %>
       </div>
 
       <div class="form-group">
-      <%= f.password_field :password, class: 'form-control form-control-lg', placeholder: t('users.edit.パスワード') %>
+      <%= t 'users.new.パスワード' %> 
+      <%= f.password_field :password, class: 'form-control form-control-lg' %>
       </div>
 
       <div class="form-group">
-      <%= f.password_field :password_confirmation, class: 'form-control form-control-lg', placeholder: t('users.edit.パスワード確認') %>
+      <%= t 'users.new.パスワード確認' %> 
+      <%= f.password_field :password_confirmation, class: 'form-control form-control-lg' %>
       </div>
 
-      <%= f.submit (t 'users.new.登録'), class: "btn btn-outline-light btn-block" %>
+
+      <%= f.submit  "Submit", class: "btn btn-outline-light btn-block" %>
     <% end %>
