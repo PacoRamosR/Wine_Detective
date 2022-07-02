@@ -22,7 +22,6 @@ class WinesController < ApplicationController
     def update
       @wine = Wine.find(params[:id])
       if @wine.update(wine_params)
-        flash[:success] = "Wine updated"
         redirect_to @wine
       else
         render 'edit'

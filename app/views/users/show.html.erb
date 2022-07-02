@@ -5,7 +5,7 @@
 <div class="row">
   <aside class="col-md-4">
     <div class="user">
-      <%= image_tag(@user.profile_picture) if @user.profile_picture.attached? %>
+      <%= image_tag(@user.avatar) if @user.avatar.attached? %>
     </div>
     <section class="user_info">
       <h1>
