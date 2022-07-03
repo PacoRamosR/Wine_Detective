@@ -1,6 +1,10 @@
 class Wine < ApplicationRecord
     has_many :microposts, dependent: :destroy
+    
     has_one_attached :profile_picture, dependent: :destroy
+    validates :profile_picture, attached: true
+
+
     validates :name, presence: true
     validates :country, presence: true
     validates :price, presence: true

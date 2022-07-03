@@ -20,8 +20,8 @@ gem 'chartkick', '~> 4.1', '>= 4.1.3'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.8'
 gem 'font-awesome-sass'
 gem 'mail_form'
-
-
+gem 'active_storage_validations'
+gem "aws-sdk-s3", require: false
 
 
 
