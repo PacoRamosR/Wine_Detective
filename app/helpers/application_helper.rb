@@ -52,7 +52,7 @@ module ApplicationHelper
   # 各ページのイメージ画像
   # SNS等でシェアされた際に活用されます
   def og_image(page_image = '')
-    base_image = "logo.png"
+    base_image = "https://imgur.com/a/FvH8Lon"
     if page_image.empty?
       base_image
     else
