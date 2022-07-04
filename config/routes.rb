@@ -23,6 +23,10 @@ Rails.application.routes.draw do
   get  '/policy-en', to: 'static_pages#policy-en'
   get  '/terms-en', to: 'static_pages#terms-en'
 
+  get '/404', to: 'errors#not_found'
+  get '/500', to: 'errors#internal_server'
+  get '/422', to: 'errors#unprocessable'
+
 
   get  '/signup',  to: 'users#new'
   get    '/login',   to: 'sessions#new'
