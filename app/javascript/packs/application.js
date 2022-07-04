@@ -5,8 +5,10 @@
 
 // require bootstrap
 //= require bootstrap-sprockets 
-//= require jquery
+//= require bootstrap-dropdown
 //= require jquery_ujs
+//= require jquery-ui
+//= require jquery
 //= require turbolinks
 //= require_tree .
 

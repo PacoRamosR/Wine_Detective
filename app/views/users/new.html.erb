@@ -1,7 +1,7 @@
 <% provide(:title, "Home") %>
 <!DOCTYPE html>
 
-      <meta charset="UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
@@ -17,7 +17,7 @@
 
 
 
-<header id="home-section">
+<section id="home-section">
   <div class="dark-overlay">
     <div class="home-inner container">
       <div class="row">
@@ -65,63 +65,56 @@
       </div>
     </div>
   </div>
- </header>
+ </section>
 
-  <section id="about" class="py-5 text-center bg-gray mb-5">
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <div class="info-header mb-5">
-            <h1 class="text-primary pb-3 display-3">
-              <%= t 'users.new.Wine Detectiveって何?' %>
-            </h1>
-            <h2 class="lead pb-3 display-5">
-              <%= t 'users.new.コンビニやスーパーの定番ワインをカジュアルフードとペアリングしてお勧めするウェブページです。' %>
-            </h2>
-          </div>
-          <div id="accordion">
-            <div class="card">
-              <div class="card-header">
-                <h5 class="mb-0">
-                  <div href="#collapse1" data-toggle="collapse" data-parent="#accordion">
-                    <i class="fas fa-arrow-circle-down"></i><%= t 'users.new.ワイン' %>
-                  </div>
-                </h5>
-              </div>
-
-              <div id="collapse1" class="collapse show">
-                <div class="card-body">
-                 <h2 class="card-text"><%= t 'users.new.このサイトのワインはコンビニやスーパーの定番品しか載せていません。シーズナルや期間限定のワインは載せてないのでご注意下さい。' %></h2>
+<section id="about" class="py-5 text-center bg-gray mb-5">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="info-header mb-5">
+          <h1 class="text-primary pb-3 display-3">
+            <%= t 'users.new.Wine Detectiveって何?' %>
+          </h1>
+          <h2 class="lead pb-3 display-5">
+            <%= t 'users.new.コンビニやスーパーの定番ワインをカジュアルフードとペアリングしてお勧めするウェブページです。' %>
+          </h2>
+        </div>
+        <div id="accordion">
+          <div class="card">
+            <div class="card-header">
+              <h5 class="mb-0">
+                <div href="#collapse1" data-toggle="collapse" data-parent="#accordion">
+                  <i class="fas fa-arrow-circle-down"></i><%= t 'users.new.ワイン' %>
                 </div>
-              </div>
+              </h5>
             </div>
-
-            <div class="card">
-              <div class="card-header">
-                <h5 class="mb-0">
-                  <div href="#collapse2" data-toggle="collapse" data-parent="#accordion">
-                    <i class="fas fa-arrow-circle-down"></i>
-                    <%= t 'users.new.価格' %>
-                  </div>
-                </h5>
-              </div>
-
-              <div id="collapse2" class="collapse">
-                <div class="card-body">
-                  <h2> <%= t 'users.new.このサイトのワインの価格はコンビニのレギュラー価格になっています。時期によって実売価となる場合がありますのでご注意下さい。' %></h2>
-                </div>
-              </div>
-            </div>
+          <div id="collapse1" class="collapse show">
+            <div class="card-body">
+              <h2 class="card-text"><%= t 'users.new.このサイトのワインはコンビニやスーパーの定番品しか載せていません。シーズナルや期間限定のワインは載せてないのでご注意下さい。' %></h2>
             </div>
           </div>
         </div>
+      <div class="card">
+        <div class="card-header">
+          <h5 class="mb-0">
+            <div href="#collapse2" data-toggle="collapse" data-parent="#accordion">
+              <i class="fas fa-arrow-circle-down"></i>
+              <%= t 'users.new.価格' %>
+            </div>
+          </h5>
+        </div>
+      <div id="collapse2" class="collapse">
+        <div class="card-body">
+          <h2> <%= t 'users.new.このサイトのワインの価格はコンビニのレギュラー価格になっています。時期によって実売価となる場合がありますのでご注意下さい。' %></h2>
+        </div>
       </div>
     </div>
+  </div>
     <br>
     <br>
     <br>
     <br>
-  </section>
+</section>
 
 
 
