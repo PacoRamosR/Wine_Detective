@@ -102,8 +102,8 @@ Rails.application.configure do
   :password       => ENV['MAILGUN_SMTP_PASSWORD'],
   :domain         => 'wine-detective.heroku.com', # UPDATE THIS VALUE WITH YOUR OWN APP
   :authentication => :plain,
-}
-ActionMailer::Base.delivery_method = :smtp
+  }
+  ActionMailer::Base.delivery_method = :smtp
   config.active_record.dump_schema_after_migration = false
 
   # Inserts middleware to perform automatic connection switching.
