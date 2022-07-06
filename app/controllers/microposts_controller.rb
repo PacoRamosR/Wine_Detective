@@ -5,17 +5,14 @@ class MicropostsController < ApplicationController
     def create
         @micropost = current_user.microposts.build(micropost_params)
         if @micropost.save
-          flash[:success] = "レビュー追加しました!"
           redirect_back fallback_location: root_path
         else
-          flash[:danger] = "Fail!"
           redirect_back fallback_location: root_path
         end
     end
   
     def destroy
       @micropost.destroy
-      flash[:success] = "レビュー削除されました"
       redirect_back fallback_location: root_path
     end
 

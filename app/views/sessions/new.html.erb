@@ -15,9 +15,9 @@
               <%= t 'users.new.パスワード' %> 
               <%= f.password_field :password, class: 'form-control mb-4' %> 
 
-              <%= f.submit "Log in", class: "btn btn-primary mb-3" %>
+              <%= f.submit I18n.t( "users.new.Log in"), class: "btn btn-primary mb-3" %>
             <% end %>
-            <p> <%= link_to (t 'users.new.こちらで'), signup_path, class: 'a-primary' %> <%= t 'users.new.登録をお願いします。'%></p>
+            <p> <%= link_to I18n.t( "users.new.Sign Up"), signup_path, class: 'a-primary' %> <%= t 'users.new.をお願いします。'%></p>
           </div>
         </div>
       </div>

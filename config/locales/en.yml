@@ -1,7 +1,9 @@
-en:
+ja:
   users:
     new:
       もっとカジュアルにワインを楽しもう！: "pepito!"
+      Sign Up: 登録
+      Log in: ログイン
   wines:
     show:
       ワイン情報: Wine Info 

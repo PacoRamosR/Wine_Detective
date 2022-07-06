@@ -51,9 +51,9 @@
         <% if logged_in? %>
         <% else %>
         <div class="col-lg-4">
-          <div class="card bg-primary text-center card-form">
+          <div class="card bg-primary text-center">
             <div class="card-body">
-              <h3><%= t 'users.new.登録' %></h3>
+              <h3><%= I18n.t("users.new.Sign Up") %></h3>
               <p><%= t 'users.new.下記のフォームを記入ください' %></p>
 
                 <%= render 'users/new' %>
