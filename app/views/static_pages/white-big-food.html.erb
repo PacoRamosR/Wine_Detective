@@ -11,8 +11,8 @@
 
 
 <div class="choice-dark-overlay">
-  <div class="home-inner container">
-      <div class="card text-dark  mt-5 mb-5">
+  <div class="home-inner container pb-5 mb-5">
+      <div class="card text-dark ">
         <div class="card-header">
           <h2><%= t 'wines.choice.ワインのお勧め' %></h2>
         </div>
@@ -23,29 +23,29 @@
       </div>
       <div class="card-columns py-2">
         <div class="card  mb-5">
-          <%= link_to '/wines/4' do %>
+          <%= link_to 'wines/4' do %>
             <div class="bg-image hover-zoom">
-            <img class="card-img-top" <%=  image_tag("food/healthy.jpeg") %>
+            <img class="card-img-top" <%=  image_tag("food/healthy.jpg") %>
             </div>
            <% end %>
           <div class="card-body">
-            <h4 class="card-title">ヘルシー</h4>
+            <h4 class="card-title"><%= t 'wines.choice.ヘルシー' %></h2></h4>
           </div>
         </div>
         <div class="card  mb-5">
           <%= link_to 'wines/24' do %>
-            <img class="card-img-top" <%=  image_tag("food/junk.jpeg") %>
+            <img class="card-img-top" <%=  image_tag("food/junk.jpg") %>
           <% end %>
           <div class="card-body">
-            <h4 class="card-title">ジャンクフード</h4>
+            <h4 class="card-title"><%= t 'wines.choice.ジャンクフード' %></h4>
           </div>
         </div>
         <div class="card  mb-5">
           <%= link_to 'wines/19' do %>
-            <img class="card-img-top" <%=  image_tag("food/sweets.jpeg") %>
+            <img class="card-img-top" <%=  image_tag("food/sweets.jpg") %>
           <% end %>
           <div class="card-body">
-            <h4 class="card-title">スイーツ・お菓子</h4>
+            <h4 class="card-title"><%= t 'wines.choice.スイーツ・お菓子' %></h4>
           </div>
         </div>
     </div>

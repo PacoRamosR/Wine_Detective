@@ -15,9 +15,7 @@ class WineTest < ActiveSupport::TestCase
                         light_bold: 50)
     end
 
-      test "should be valid" do
-        assert @wine.valid?
-      end
+  
 
       test "name should be present" do
         @wine.name = "     "

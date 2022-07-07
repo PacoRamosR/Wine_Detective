@@ -1,8 +1,10 @@
-<div class="col mb-5">
+
     <%= link_to wine, class: "a-primary" do %>        
-        <div class="col mb-5">
-            <div class="card h-100">
-                <img class="card-img-top img-fluid"  /><%= image_tag wine.profile_picture, style: 'height:auto;width:auto;' %>
+        <div class="col mb-5 bg-white">
+            <div class="card "> 
+            <% if wine.profile_picture.attached? %>
+                <%= image_tag wine.profile_picture %>
+                <% end %>
                     <div class="card-body p-4">
                         <div class="text-center">
                             <h3 class="card-title">
@@ -25,8 +27,7 @@
                             <% end %></h3>
                         </div>
                     </div>
-                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent"></div>
+                <div class="card-footer p-4 pt-0 border-top-0 bg-white"></div>
             </div>
         </div>
     <% end %>
-</div>

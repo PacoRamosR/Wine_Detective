@@ -22,7 +22,6 @@ class WinesController < ApplicationController
     def update
       @wine = Wine.find(params[:id])
       if @wine.update(wine_params)
-        flash[:success] = "Wine updated"
         redirect_to @wine
       else
         render 'edit'
@@ -51,7 +50,8 @@ class WinesController < ApplicationController
       def wine_params
         params.require(:wine).permit(:id, :name, :country, :price,
                                      :grape_variety, :explanation, :pairing, :smooth_tannic,
-                                     :dry_sweet, :soft_acidic, :rate, :light_bold, :wine_type, :profile_picture)
+                                     :dry_sweet, :soft_acidic, :rate, :light_bold, :wine_type, :profile_picture,
+                                     :name_en, :country_en, :grape_variety_en, :explanation_en, :pairing_en)
       end
 
       def admin_user

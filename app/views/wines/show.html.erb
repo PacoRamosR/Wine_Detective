@@ -1,19 +1,6 @@
 <% provide(:title, @wine.name) %>
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Shop Homepage - Start Bootstrap Template</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Bootstrap icons-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
+
 
 
 <section id="showcase" class="">
@@ -40,7 +27,9 @@
                     <div class= presentation-like>
                         <%= render 'bookmark_button', wine: @wine  %>
                     </div>
+                    <% if @wine.profile_picture.attached? %>
                     <img class="img-fluid d-none d-lg-block"><%= image_tag(@wine.profile_picture) %>
+                    <% end %>
                 </div>
             </div>
         </div>
@@ -140,7 +129,7 @@
                     <% if @microposts.any? %>
                     <%= render @microposts %>
                     <% else %>
-                    <h2>今のところレビューありません</h2>
+                    <h2><%= t 'wines.show.今のところレビューありません' %></h2>
                     <% end %>
                 <%= paginate @microposts %>
             </div>

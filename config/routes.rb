@@ -18,7 +18,14 @@ Rails.application.routes.draw do
   get  '/food32',  to: 'static_pages#sparkling-medium-food'
   get  '/food33',  to: 'static_pages#sparkling-big-food'
   get  '/about',   to: 'static_pages#about'
-  get  '/contact', to: 'static_pages#contact'
+  get  '/policy', to: 'static_pages#policy'
+  get  '/terms', to: 'static_pages#terms'
+  get  '/policy-en', to: 'static_pages#policy-en'
+  get  '/terms-en', to: 'static_pages#terms-en'
+
+  get '/404', to: 'errors#not_found'
+  get '/500', to: 'errors#internal_server'
+  get '/422', to: 'errors#unprocessable'
 
 
   get  '/signup',  to: 'users#new'

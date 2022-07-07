@@ -12,8 +12,8 @@
 
 
 <div class="choice-dark-overlay">
-  <div class="home-inner container">
-      <div class="card text-dark  mt-5 mb-5">
+  <div class="home-inner container pb-5 mb-5">
+      <div class="card text-dark ">
         <div class="card-header">
           <h2><%= t 'wines.choice.ワインのお勧め' %></h2>
         </div>
@@ -23,23 +23,19 @@
         </div>
       </div>
       <div class="card-group py-2">
-        <div class="card  mr-4 mb-5">
+        <div class="card  mb-5 mr-3">
           <%= link_to 'food32' do %>
-            <div class="bg-image hover-zoom">
-            <img class="card-img-top" <%=  image_tag("price/low-price.jpeg") %>
+            <div class="card-body a-primary">
+              <h4 class="card-title display-3"><%= t 'wines.choice.1000円以下'%></h4>
             </div>
-           <% end %>
-          <div class="card-body">
-            <h4 class="card-title"><%= t 'wines.choice.1000円以下'%></h4>
-          </div>
+          <% end %>
         </div>
         <div class="card  mb-5">
           <%= link_to 'food33' do %>
-            <img class="card-img-top" <%=  image_tag("price/big-price.jpeg") %>
+            <div class="card-body a-primary">
+              <h4 class="card-title display-3"><%= t 'wines.choice.1000円以上'%></h4>
+            </div>
           <% end %>
-          <div class="card-body">
-            <h4 class="card-title"><%= t 'wines.choice.1000円以上'%></h4>
-          </div>
         </div>
     </div>
   </div>

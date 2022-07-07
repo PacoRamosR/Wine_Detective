@@ -15,7 +15,30 @@ en:
       ログイン: "Log in"
   users:
     new:
+      Log in: Log in
+      メールアドレス:  Email
+      パスワード: Password
+      パスワード確認: Password Confirmation
+      こちらで: Create here
+      Sign Up: Sign Up
+      下記のフォームを記入ください: Please fill out this form to register
+      をお願いします。: your account
       もっとカジュアルにワインを楽しもう！: "Discover and enjoy casual wines!"
+      予算・お好みであなたのピッタリカジュアルワインを見つけましょう！: "Get recommendations based on you budget and food preferences."
+      唐揚げやスイーツでも合うワインあります！: Discover with wine pair better with food like Pocky or Famichiki!
+      Wine Detectiveって何?: What is Wine Detective?
+      コンビニやスーパーの定番ワインをカジュアルフードとペアリングしてお勧めするウェブページです。: Wine Detective is a web page where which helps to find affordable wines from convience stores or supermarkets and pair them with casual food.
+      ワイン: Wines
+      このサイトのワインはコンビニやスーパーの定番品しか載せていません。シーズナルや期間限定のワインは載せてないのでご注意下さい。: Every wine in this web is sold in convinience store or supermarket as regular item. That means that no seasonal product is include on the wine list
+      価格: Price
+      このサイトのワインの価格はコンビニのレギュラー価格になっています。時期によって実売価となる場合がありますのでご注意下さい。: The price in this web is taken directly from convinience store or supermarket sources. Depend on the season, the price may not be the same that the one in this web.
+    edit:
+      アカウント設定: Update your profile
+      名前: Name
+      メールアドレス: Email
+      パスワード: Password
+      パスワード確認: Confirmation
+      プロファイル写真: Profile Picture
   wines:
     show:
       ワイン情報: Wine Info 
@@ -37,19 +60,27 @@ en:
       ペアリング: Pairing
       お気に入り: Add to Wishlist
       レビュー: Reviews
+      今のところレビューありません: There are not reviews yet.
+      削除: Delete
     choice:
       ワインのお勧め: Wine Recommendation
       今日は何のワインが飲みたいですか？: What type of wine do you want to drink today?
       下記の種類の中に一つを選択してクリックしてください。: Select one of the options in below.
       今日のワインの予算はいくらですか？: What is your budget for today's wine?
       800円以下: Under ¥800
-      800円以上、1000円以下: Between ¥800 and ¥1000
+      800円~1000円: ¥800 ~ ¥1000
       1000円以下: Under ¥1000
       1000円以上: Over ¥1000
       今日は何のコンビニ食品を食べますか？: What kind of food are you eating today?
+      ヘルシー: Healthy
+      ジャンクフード: Junk Food
+      スイーツ・お菓子: Sweets
     index:
       ワイン一覧: Wine List
       お気に入りワイン: Wish List
+
+
+      
 
       
 

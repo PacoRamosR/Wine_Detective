@@ -4,21 +4,30 @@
 		<div class="be-comment-content">
 			
 				<span class="be-comment-name">
-					<a href="blog-detail-2.html"><%= micropost.user.name%></a>
+					<%= link_to  (micropost.user.name), micropost.user %> |
+					                    <% if I18n.locale == :ja %>
+                        <%= link_to  (micropost.wine.name), micropost.wine %>
+                    <% else %>
+                        <%= link_to  (micropost.wine.name_en), micropost.wine %>
+                    <% end %>
+					
 					</span>
 				<span class="be-comment-time">
 					<i class="fa fa-clock-o"></i>
 					<%= micropost.created_at %>
 				</span>
 
+				
+
 			<p class="be-comment-text">
 				<%= micropost.content %>
 			</p>
+
 		</div>
 
 
   <% if current_user?(micropost.user) %>
-      <%= button_to "削除", micropost, method: :delete, class: "btn btn-danger btn-small border-rounded btn-lg", style:"width:10%",
+      <%= button_to 'Delete', micropost, method: :delete, class: "btn btn-danger btn-small border-rounded btn-lg", style:"width:10%",
                                        data: { confirm: "You sure?" }%>
 
     <% end %>

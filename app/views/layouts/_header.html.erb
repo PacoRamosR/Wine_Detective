@@ -3,25 +3,8 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 <header class="navbar fixed-top navbar-inverse navbar-dark bg-dark mb-3">
+  <a class="navbar-brand" href="#"><%= link_to "Wine Detective", root_path, id: "logo" %></a>
   <div class="container">
-    <a class="navbar-brand" href="#"><%= link_to "Wine Detective", root_path, id: "logo" %></a>
-            <% if I18n.locale == :ja %>
-        <div class="navbar-brand">
-          <%= link_to  locale: :en do %>
-            <div class="bg-image hover-zoom">
-              <img id="flag" class="card-img-top" <%=  image_tag("english.png") %>
-            </div>
-          <% end %>
-        </div>
-        <% else %>
-        <div class="navbar-brand">
-          <%= link_to  locale: :ja do %>
-            <div class="bg-image hover-zoom">
-              <img id="flag" class="card-img-top" <%=  image_tag("japan.png") %>
-            </div>
-          <% end %>
-        </div>
-        <% end %>
     <nav>
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed"
@@ -45,9 +28,9 @@
             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
             <%= t 'layouts.header.ワイン管理' %>
             </a>
-            <div class="dropdown-menu">
-              <a href="#" class="dropdown-item"><%= link_to (t 'layouts.header.ワイン登録'), new_wine_path %></a>
-            </div>
+            <ul class="dropdown-menu">
+              <li class="nav-item"><%= link_to (t 'layouts.header.ワイン登録'), new_wine_path %></li>
+            </ul>
             <li class="nav-item">
             <%= link_to (t 'layouts.header.ユーザー管理'), users_path %>
             </li>
@@ -64,20 +47,34 @@
               <%= t 'layouts.header.管理'%>
             </a>
             <ul class="dropdown-menu">
-              <li><%= link_to (t 'layouts.header.プロファイル'), current_user %></li>
-              <li><%= link_to (t 'layouts.header.設定'), edit_user_path(current_user) %></li>
+              <li class="nav-item "><%= link_to (t 'layouts.header.プロファイル'), current_user %></li>
+              <li class="nav-item "><%= link_to (t 'layouts.header.設定'), edit_user_path(current_user) %></li>
               <li class="divider"></li>
-              <li>
-                <%= link_to (t 'layouts.header.ログアウト'), logout_path, method: :delete %>
+              <li class="nav-item ">
+                <%= link_to (t 'layouts.header.ログアウト'), logout_path, method: :get %>
               </li>
             </ul>
           </li>
         <% else %>
-          <li><%= link_to (t 'layouts.header.ログイン'), login_path %></li>
+          <li class="nav-item ">
+          <%= link_to (t 'layouts.header.ログイン'), login_path %>
+          </li>
         <% end %>
-
+                  <div class="navbar-brand">
+          <%= link_to  locale: :en do %>
+            <div class="bg-image hover-zoom">
+              <img id="flag" class="card-img-top" <%=  image_tag("english.png") %>
+            </div>
+          <% end %>
+        </div>
+        <div class="navbar-brand">
+          <%= link_to  locale: :ja do %>
+            <div class="bg-image hover-zoom">
+              <img id="flag" class="card-img-top" <%=  image_tag("japan.png") %>
+            </div>
+          <% end %>
+        </div>
       </ul>
-
     </nav>
   </div>
 </header>

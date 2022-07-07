@@ -1,8 +1,11 @@
 <% provide(:title, @user.name) %>
+
+<div class="index-light-overlay">
+  <div class="home-inner container pb-5 mb-5">
 <div class="row">
   <aside class="col-md-4">
     <div class="user">
-      <%= image_tag(@user.profile_picture) if @user.profile_picture.attached? %>
+      <%= image_tag(@user.avatar) if @user.avatar.attached? %>
     </div>
     <section class="user_info">
       <h1>
@@ -19,6 +22,9 @@
     <ol class="microposts">
       <%= render @microposts %>
     </ol>
+    <%= paginate @microposts %>
   <% end %>
+</div>
+</div>
 </div>
 </div>
