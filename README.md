@@ -1,3 +1,8 @@
+(English below)
+
+■ サービスリンク
+https://www.wine-detective.jp/
+
 ■ サービス概要 
   ワインが飲みたくてカジュアル飲みでコンビニにワインを買いたいけど、
   ワインのことがあまり知らなくてどのワインを買えばいいかの悩みを持つ人に、
@@ -33,3 +38,11 @@
 
   ER図
  https://tinyurl.com/4a66yefp
+ 
+ 
+ 
+■ Link
+https://www.wine-detective.jp/
+
+■ Web Description
+Wine Detective is a web page where which helps to find affordable wines from convience stores or supermarkets and pair them with casual food.
