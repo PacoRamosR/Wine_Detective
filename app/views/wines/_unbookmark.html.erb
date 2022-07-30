@@ -1,4 +1,4 @@
-<%= button_to bookmark_path(current_user.bookmarks.find_by(wine_id: wine.id)), id: "js-bookmark-button-for-board-#{wine.id}", class:"float-right bg-transparent border", method: :delete do %>
-<%=  image_tag("star-on.png") %>
+<%= button_to bookmark_path(current_user.bookmarks.find_by(wine_id: wine.id)), id: "js-bookmark-button-for-board-#{wine.id}", class:" bg-transparent border", method: :delete do %>
+<h5 class="justify-self-center"><%= t 'wines.show.お気に入りに追加されました' %></h5>
 
 <% end %>

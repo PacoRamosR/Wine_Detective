@@ -7,7 +7,7 @@
     <div class="primary-overlay text-white">
         <div class="container mt-5">
             <div class="row mt-5" >
-                <div class="col-lg-6 text-center pt-5">
+                <div class="col-lg-6  text-center pt-5">
                     <h1 class="display-2  mt-5 pt-5">
                     <% if I18n.locale == :ja %>
                         <%= @wine.name %>
@@ -22,14 +22,20 @@
                         <%= @wine.explanation_en %>
                     <% end %> 
                     </p>
-                </div>
-                <div class="col-lg-6">
-                    <div class= presentation-like>
+                    <p class="lead ">
                         <%= render 'bookmark_button', wine: @wine  %>
-                    </div>
+                    <p>
+                </div>
+                <div class="col-lg-6  mt-5">
+
+                    <div class= "col-lg-10 mb-5">
                     <% if @wine.profile_picture.attached? %>
-                    <img class="img-fluid d-none d-lg-block"><%= image_tag(@wine.profile_picture) %>
+                        <%= image_tag @wine.profile_picture,class:"img-responsive center-block",  style: 'height:90%;width:auto;margin: auto;' %>
                     <% end %>
+                    </div>
+                                         <div class="col-lg-2 my-5">
+
+                    </div>
                 </div>
             </div>
         </div>
